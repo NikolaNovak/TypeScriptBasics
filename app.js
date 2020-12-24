@@ -13,7 +13,8 @@ add(number1, number2, printResult, resultPhrase);
 var person = {
     name: "Nikola",
     age: 30,
-    hobbies: ["Sports", "Cooking"]
+    hobbies: ["Sports", "Cooking"],
+    role: [2, "Author"]
 };
 console.log(person.name);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {

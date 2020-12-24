@@ -16,11 +16,19 @@ const person: {
   name: string;
   age: number;
   hobbies: string[];
+  role: [number, string]; // tuple
 } = {
   name: "Nikola",
   age: 30,
   hobbies: ["Sports", "Cooking"],
+  role: [2, "Author"],
 };
+interface TSOnlyComment_Tuple {
+  // dummy interface for writing comments only in TS (won't be compiled to JS)
+  // person.role[1] = 10; -> this will not work because the second element has to be a string
+  // person.role = [2, "Author", "Editor"] -> this will not work because the max number of elements is 2
+  // person.role.push('admin'); -> this will unfortunately work, but you should avoid it
+}
 
 console.log(person.name);
 
