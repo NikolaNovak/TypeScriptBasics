@@ -11,3 +11,13 @@ const printResult = true;
 let resultPhrase = "The result is: ";
 
 add(number1, number2, printResult, resultPhrase);
+
+const person: {
+  name: string;
+  age: number;
+} = {
+  name: "Nikola",
+  age: 30,
+};
+
+console.log(person.name);
