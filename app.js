@@ -32,16 +32,20 @@ for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
 console.log(person.country); // will log 5
 var favoriteActivities; // any type, should be avoided normally
 favoriteActivities = ["Sports", 1, true];
-function combine(input1, input2) {
-    // union type |
+function combine(input1, input2, resultConversion) {
+    // union type -> number | string
+    // literal union type -> 'as-number' | 'as-text'
     var result;
-    if (typeof input1 === "number" && typeof input2 === "number")
-        result = input1 + input2;
+    if ((typeof input1 === "number" && typeof input2 === "number") ||
+        resultConversion === "as-number")
+        result = +input1 + +input2;
     else
         result = input1.toString() + input2.toString();
     return result;
 }
-var combinedAges = combine(30, 25);
+var combinedAges = combine(30, 25, "as-number");
 console.log(combinedAges); // 55
-var combinedNames = combine("Nikola", "Novak");
+var combinedStringAges = combine("30", "25", "as-number");
+console.log(combinedStringAges); // 55
+var combinedNames = combine("Nikola", "Novak", "as-text");
 console.log(combinedNames); // NikolaNovak
