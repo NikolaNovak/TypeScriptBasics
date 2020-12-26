@@ -30,3 +30,18 @@ for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
     console.log(hobby);
 }
 console.log(person.country); // will log 5
+var favoriteActivities; // any type, should be avoided normally
+favoriteActivities = ["Sports", 1, true];
+function combine(input1, input2) {
+    // union type |
+    var result;
+    if (typeof input1 === "number" && typeof input2 === "number")
+        result = input1 + input2;
+    else
+        result = input1.toString() + input2.toString();
+    return result;
+}
+var combinedAges = combine(30, 25);
+console.log(combinedAges); // 55
+var combinedNames = combine("Nikola", "Novak");
+console.log(combinedNames); // NikolaNovak
