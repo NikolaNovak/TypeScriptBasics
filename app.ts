@@ -47,3 +47,6 @@ for (const hobby of person.hobbies) {
 }
 
 console.log(person.country); // will log 5
+
+let favoriteActivities: any[]; // any type, should be avoided normally
+favoriteActivities = ["Sports", 1, true];
