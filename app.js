@@ -49,3 +49,12 @@ var combinedStringAges = combine("30", "25", "as-number");
 console.log(combinedStringAges); // 55
 var combinedNames = combine("Nikola", "Novak", "as-text");
 console.log(combinedNames); // NikolaNovak
+function numberAdd(n1, n2) {
+    // function return type
+    return n1 + n2;
+}
+function printNumResult(num) {
+    // void return type because nothing is returned, type inference does this already
+    console.log("Result: " + num);
+}
+printNumResult(numberAdd(5, 12));
