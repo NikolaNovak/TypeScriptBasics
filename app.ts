@@ -51,11 +51,10 @@ console.log(person.country); // will log 5
 let favoriteActivities: any[]; // any type, should be avoided normally
 favoriteActivities = ["Sports", 1, true];
 
-function combine(
-  input1: number | string,
-  input2: number | string,
-  resultConversion: "as-number" | "as-text"
-) {
+type combineInput = number | string; // type alias
+type combineConversion = "as-number" | "as-text"; // type alias
+
+function combine(input1: combineInput, input2: combineInput, resultConversion: combineConversion) {
   // union type -> number | string
   // literal union type -> 'as-number' | 'as-text'
 
