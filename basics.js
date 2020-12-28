@@ -1,3 +1,4 @@
+"use strict";
 function add(n1, n2, isLogged, phrase) {
     var result = n1 + n2;
     if (isLogged)
@@ -22,7 +23,7 @@ var person = {
     age: 30,
     hobbies: ["Sports", "Cooking"],
     role: [2, "Author"],
-    country: Country.CROATIA
+    country: Country.CROATIA,
 };
 console.log(person.name);
 for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {

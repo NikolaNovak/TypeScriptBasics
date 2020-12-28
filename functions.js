@@ -1,3 +1,4 @@
+"use strict";
 // union type -> number | string
 // literal union type -> 'as-number' | 'as-text'
 function combine(input1, input2, resultConversion) {
