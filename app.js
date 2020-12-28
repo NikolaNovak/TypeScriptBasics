@@ -32,9 +32,9 @@ for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
 console.log(person.country); // will log 5
 var favoriteActivities; // any type, should be avoided normally
 favoriteActivities = ["Sports", 1, true];
+// union type -> number | string
+// literal union type -> 'as-number' | 'as-text'
 function combine(input1, input2, resultConversion) {
-    // union type -> number | string
-    // literal union type -> 'as-number' | 'as-text'
     var result;
     if ((typeof input1 === "number" && typeof input2 === "number") ||
         resultConversion === "as-number")
@@ -49,12 +49,24 @@ var combinedStringAges = combine("30", "25", "as-number");
 console.log(combinedStringAges); // 55
 var combinedNames = combine("Nikola", "Novak", "as-text");
 console.log(combinedNames); // NikolaNovak
+// function return type
 function numberAdd(n1, n2) {
-    // function return type
     return n1 + n2;
 }
+// void return type because nothing is returned, type inference does this already
 function printNumResult(num) {
-    // void return type because nothing is returned, type inference does this already
     console.log("Result: " + num);
 }
 printNumResult(numberAdd(5, 12));
+// function types -> combineValues should accept any function that takes 2 number arguments and returns a number
+var combineValues;
+// combineValues = add;   ->  TS will complain because add has 4 arguments
+combineValues = numberAdd;
+console.log(combineValues(5, 5));
+function addAndHandle(n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
+}
+addAndHandle(10, 20, function (result) {
+    console.log(result);
+});
