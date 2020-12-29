@@ -1,15 +1,15 @@
 "use strict";
 function add(n1, n2, isLogged, phrase) {
-    var result = n1 + n2;
+    const result = n1 + n2;
     if (isLogged)
         console.log(phrase + result);
     return result;
 }
-var number1;
+let number1;
 number1 = 5;
-var number2 = 2.8;
-var printResult = true;
-var resultPhrase = "The result is: ";
+const number2 = 2.8;
+const printResult = true;
+let resultPhrase = "The result is: ";
 add(number1, number2, printResult, resultPhrase);
 var Country;
 (function (Country) {
@@ -18,7 +18,7 @@ var Country;
     Country[Country["NORWAY"] = 101] = "NORWAY";
     Country["SWEDEN"] = "SWE";
 })(Country || (Country = {}));
-var person = {
+const person = {
     name: "Nikola",
     age: 30,
     hobbies: ["Sports", "Cooking"],
@@ -26,10 +26,9 @@ var person = {
     country: Country.CROATIA,
 };
 console.log(person.name);
-for (var _i = 0, _a = person.hobbies; _i < _a.length; _i++) {
-    var hobby = _a[_i];
+for (const hobby of person.hobbies) {
     console.log(hobby);
 }
 console.log(person.country); // will log 5
-var favoriteActivities; // any type, should be avoided normally
+let favoriteActivities; // any type, should be avoided normally
 favoriteActivities = ["Sports", 1, true];

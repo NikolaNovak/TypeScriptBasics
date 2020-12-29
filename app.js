@@ -1,6 +1,6 @@
 "use strict";
-var userInput;
-var userName;
+let userInput;
+let userName;
 userInput = 5;
 userInput = "Nikola";
 // if userInput was of type 'any' this check would not be needed, but for the 'unknown' type it is needed
@@ -10,5 +10,5 @@ if (typeof userInput === "string")
 function generateError(message, code) {
     throw { message: message, errorCode: code };
 }
-var result = generateError("An error occured!", 500);
+const result = generateError("An error occured!", 500);
 console.log("The result:" + result); // this will not be executed because an error is thrown on the previous line
