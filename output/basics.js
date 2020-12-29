@@ -29,6 +29,6 @@ console.log(person.name);
 for (const hobby of person.hobbies) {
     console.log(hobby);
 }
-console.log(person.country); // will log 5
-let favoriteActivities; // any type, should be avoided normally
+console.log(person.country);
+let favoriteActivities;
 favoriteActivities = ["Sports", 1, true];
